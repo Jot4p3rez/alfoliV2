@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animación de fondo */
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(135deg, #d0f0fd, #74A8ED);
+    }
+
+    100% {
+        background: linear-gradient(135deg, #74A8ED, #d0f0fd);
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #d0f0fd, #74A8ED);
+    animation: gradientShift 10s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal del login */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+        border-radius: 10px;
+    }
+}
+
+/* Encabezado con logo */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header .logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #333333;
+}
+
+@media (max-width: 480px) {
+    .header .logo {
+        width: 80px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+}
+
+/* Contenedores de los campos */
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+    border-color: #4b6cb7;
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    .input-container label {
+        font-size: 0.9em;
+    }
+
+    .input-container input {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+}
+
+/* Botón */
+.button-container {
+    margin-top: 10px;
+}
+
+.button-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4b6cb7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #3a56a0;
+}
+
+@media (max-width: 480px) {
+    .button-container button {
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 6px;
+    }
+}
+
+/* Responsive general para pantallas muy pequeñas (ej: 320px) */
+@media (max-width: 320px) {
+    .login-container {
+        padding: 20px 15px;
+        border-radius: 6px;
+    }
+
+    .header .logo {
+        width: 70px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .input-container label {
+        font-size: 0.85em;
+    }
+
+    .input-container input {
+        font-size: 13px;
+    }
+
+    .button-container button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .login-container {
+        max-width: 90%;
+    }
+
+    .input-container input {
+        font-size: 16px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+}
